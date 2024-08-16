@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -38,6 +40,8 @@ dependencies:
   provider: ^6.1.2
   sqflite: ^2.3.2
   path: ^1.8.3
+  google_fonts: 6.1.0
+  flutter_sticky_header: ^0.6.5
 
 dev_dependencies:
   flutter_test:
@@ -55,11 +59,22 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  uses-material-design: true
+  fonts:
+    - family: PixelifySans
+      fonts: 
+        - asset: fonts/PixelifySans-VariableFont_wght.ttf
+        - asset: fonts/PixelifySans-Bold.ttf
+          weight: 700
+        - asset: fonts/PixelifySans-Medium.ttf
+          weight: 500
+        - asset: fonts/PixelifySans-Regular.ttf
+        - asset: fonts/PixelifySans-SemiBold.ttf
+          weight: 600
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:

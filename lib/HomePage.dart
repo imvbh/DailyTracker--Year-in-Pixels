@@ -11,15 +11,17 @@ class YearInPixelsHomePage extends StatefulWidget {
 
 class _YearInPixelsHomePageState extends State<YearInPixelsHomePage> {
   bool isPressed = false;
+  
 
   @override
   Widget build(BuildContext context) {
+      
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Color.fromARGB(255, 255, 246, 246),
-          statusBarIconBrightness: Brightness.dark,
-          statusBarBrightness: Brightness.light,
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Theme.of(context).colorScheme.background,
+          statusBarIconBrightness: isPressed? Brightness.dark : Brightness.light,
+          statusBarBrightness: isPressed? Brightness.light : Brightness.dark,
         ),
         iconTheme: IconThemeData(
           color: Theme.of(context).colorScheme.inversePrimary,
@@ -30,9 +32,9 @@ class _YearInPixelsHomePageState extends State<YearInPixelsHomePage> {
             Text(
               'Pixel Diary',
               style: TextStyle(
+                fontFamily: 'PixelifySans',
                 color: Theme.of(context).colorScheme.inversePrimary,
-                fontWeight: FontWeight.bold,
-                fontSize: 30,
+                fontSize: 40,
               ),
             ),
             IconButton(
